@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href='static\css\main.css' />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>COVID-19 Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+</head>
+<body>
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <nav class="nav">
+            <div class="container">
+            <ul>
+                
+                <li  id="covid_title">Your COVID-19 Result Page</li>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="#">About</a></li>
+              
+              </ul>
+            </div>
+        </nav>
+      </div>
+
+      <div class="result-center" >
+        <center>
+            {% if label=='covid'%}
+            <p class="result">Result: <em>covid</em></p>
+            {% endif %}
+            {% if label=='normal'%}
+            <p class="result">Result: <em>Normal</em></p>
+            {% endif %}
+            {% if label=='viral'%}
+            <p class="result">Its Viral </p>
+            {% endif %}
+
+        </center>
+    </div>
+   
+    <script src="static\js\main.js"></script>
+</body>
+</html>
