@@ -57,7 +57,7 @@ def home():
 def get_input():
     if request.method == 'POST':
         img_file = request.files.get('image_name','not entered')
-        if img_file == '':
+         if img_file.filename == '':
             return 'No File Detected'
         image = Image.open(img_file.stream)
         
